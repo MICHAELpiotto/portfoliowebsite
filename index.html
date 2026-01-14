@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Michael Piotto Portfolio</title>
+
+<style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at 70% 50%, #020f1f, #14020f);
+      color: #e8ebeb;
+      box-sizing: border-box;
+    }
+
+    /* CONTAINER */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 300px;             /* increased space between sidebar and projects */
+      max-width: 100%;       
+      margin: 0 auto;
+      padding: 40px 20px;    
+      box-sizing: border-box;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .sidebar p {
+      margin-top: 24px;
+      line-height: 1.6;
+      color: #d1d5db;
+      max-width: 100%;      
+    }
+
+    .contact {
+      margin-top: 48px;
+      font-size: 0.95rem;
+      color: #9ca3af;
+    }
+
+    .contact a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #ffffff;
+    }
+
+    /* PROJECT LIST */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: minmax(120px, 200px) 1fr; /* responsive image column */
+      gap: 15px;           /* space between image and text */
+      padding: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s ease;
+      margin: 0;
+      overflow: hidden;    /* prevent scroll from large images */
+    }
+
+    .project-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;   
+    }
+
+    .project-title {
+      font-size: 1.1rem;   
+      font-weight: 600;
+      color: #c0c4cc;
+      margin-bottom: 6px;
+    }
+
+    .project-subtitle {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #9fa1a5;
+      margin-top: 4px;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1>Michael Piotto</h1>
+    <h2>Design Portfolio</h2>
+
+    <p>
+      My name is Michael Piotto, I’m a mechanical engineering student at Carleton University. I design and build mechanical systems, primarily through hands-on prototyping and 3D printing. My work focuses on functionality, iteration, and solving practical design constraints.
+       These are my favorite personal projects that I’ve made. 
+    </p>
+
+    <div class="contact">
+      Michael.e.Piotto@gmail.com<br>
+      +1 (613) 552 8560<br>
+      <a href="MICHAELPIOTTO_resume.pdf" target="_blank">Resume (PDF)</a>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="projects">
+
+    <a class="project-card" href="web_tensioner.HTML">
+      <img class="project-image" src="chaintensioner/20250914_181117.jpg" alt="Chain Tensioner">
+
+      <div>
+        <div class="project-title">Chain Tensioner</div>
+        <div class="project-subtitle">
+          Designed and 3d modeled a functional bicycle chain tensioner in CAD Fabricated the tensioner with 3d printed parts and aluminum, to be mounted on the
+          chainstay of the bike with a unique clamping system...
+        </div>
+      </div>
+    </a>
+
+     <!-- PROJECTS two, dualengine  -->
+    <a class="project-card" href="web_rocket.html">
+      <img class="project-image" src="dual rocket\Screenshot 2026-01-06 004157.png" alt="DualRocket">
+
+      <div>
+        <div class="project-title">Dual Rocket Engine</div>
+        <div class="project-subtitle">
+          Designed and 3D-modeled a small-scale rocket using CAD, applying Barrowman equations to find body and fin dimensions. 
+          3D modeled and 3D printed the motor housing for the two clustered engines...
+
+        </div>
+      </div>
+    </a>
+    
+     <!-- PROJECTS three, RF transmitter  -->
+    <a class="project-card" href="controller.html">
+      <img class="project-image" src="RFcontroller\20260111_213736.jpg" alt="Chain Tensioner">
+
+      <div>
+        <div class="project-title">Remote Rocket Laucher</div>
+        <div class="project-subtitle">
+        Designed a 433 MHz wireless RF control system to safely initiate a model rocket launch from a remote distance.
+        Implemented Manchester-style encoding and decoding using Raspberry Pi PIO peripherals for sending data.
+        Designed transmitter and receiver circuits around Raspberry Pi platforms; developed control firmware and 3D-modeled and printed a custom enclosure...
+
+        </div>
+      </div>
+    </a>
+    
+
+  </div>
+</div>
+</body>
+</html>
